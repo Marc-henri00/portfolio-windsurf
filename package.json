@@ -1,8 +1,9 @@
 {
   "name": "portfolio-windsurf",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "homepage": "https://marc-andre-dev.github.io/portfolio-windsurf",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,7 +13,9 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
@@ -22,6 +25,7 @@
     "@emotion/styled": "^11.14.1",
     "firebase": "^12.6.0",
     "framer-motion": "^10.18.0",
+    "gh-pages": "^6.3.0",
     "react": "^18.3.1",
     "react-beautiful-dnd": "^13.1.1",
     "react-dom": "^18.3.1",
