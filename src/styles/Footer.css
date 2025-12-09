@@ -1,0 +1,99 @@
+.footer {
+  background-color: var(--bg-secondary);
+  padding: 3rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.copyright {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Styles pour le mode sombre */
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background-color: #0f172a;
+    border-top-color: #1e293b;
+  }
+  
+  .social-icon {
+    background-color: #1e293b;
+    color: #e2e8f0;
+  }
+  
+  .copyright {
+    color: #94a3b8;
+  }
+}
+
+/* Animation de survol des icônes sociales */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.social-icon:hover {
+  animation: bounce 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 0;
+  }
+  
+  .social-links {
+    gap: 1rem;
+  }
+  
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+  
+  .copyright {
+    font-size: 0.85rem;
+  }
+}
