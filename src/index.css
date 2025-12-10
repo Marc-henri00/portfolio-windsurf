@@ -1,6 +1,14 @@
 /* Import des variables CSS en premier */
 @import './styles/variables.css';
 
+/* Import des styles des composants */
+@import './styles/Navbar.css';
+@import './styles/Footer.css';
+@import './styles/Home.css';
+@import './styles/About.css';
+@import './styles/Projects.css';
+@import './styles/Contact.css';
+
 /* Reset et styles de base */
 * {
   margin: 0;
@@ -272,10 +280,3 @@ img {
   }
 }
 
-/* Import des styles des composants */
-@import './styles/Navbar.css';
-@import './styles/Footer.css';
-@import './styles/Home.css';
-@import './styles/About.css';
-@import './styles/Projects.css';
-@import './styles/Contact.css';
