@@ -6,10 +6,15 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
   base: '/',
   build: {
-    outDir: 'dist',
+    outDir: 'build',
     emptyOutDir: true,
     rollupOptions: {
-      input: 'index.html',
+      input: '/index.html',
+      output: {
+        entryFileNames: 'assets/[name].[hash].js',
+        chunkFileNames: 'assets/[name].[hash].js',
+        assetFileNames: 'assets/[name].[hash][extname]',
+      },
     },
   },
   plugins: [

@@ -5,13 +5,33 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "build"
       }
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "^/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "^/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "^/workbox-(.*)",
+      "dest": "/workbox-$1"
+    },
+    {
+      "src": "^/sw.js",
+      "dest": "/sw.js"
+    },
+    {
+      "src": "^/manifest.webmanifest",
+      "dest": "/manifest.webmanifest"
+    },
+    {
+      "src": "^/(.*)",
       "dest": "/index.html"
     }
   ]
