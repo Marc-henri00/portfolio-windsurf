@@ -4,10 +4,13 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/portfolio-windsurf/',
+  base: '/',
   build: {
-    outDir: 'build',
+    outDir: 'dist',
     emptyOutDir: true,
+    rollupOptions: {
+      input: 'index.html',
+    },
   },
   plugins: [
     react(),
